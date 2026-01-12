@@ -6,7 +6,8 @@ import torch
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 
 # Use a real food model from HuggingFace
-MODEL_NAME = "nateraw/food"
+MODEL_NAME = "eslamxm/food-image-classification"
+
 
 print("Loading food model...")
 processor = AutoImageProcessor.from_pretrained(MODEL_NAME)
@@ -39,3 +40,4 @@ async def scan_food(file: UploadFile = File(...)):
     return {
         "food": label
     }
+
