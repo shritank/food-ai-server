@@ -5,7 +5,6 @@ import io
 import torch
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 
-# Use a real food model from HuggingFace
 MODEL_NAME = "eslamxm/food-image-classification"
 
 
@@ -40,4 +39,5 @@ async def scan_food(file: UploadFile = File(...)):
     return {
         "food": label
     }
+
 
